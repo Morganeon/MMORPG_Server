@@ -4,11 +4,13 @@
 #include <QMainWindow>
 #include <QTcpServer>
 #include <QTcpSocket>
-#include "NetworkObjects/mmoclient.h"
+#include "System/realm.h"
 
 namespace Ui {
 class MainWindow;
 }
+
+using namespace MMO::System;
 
 class MainWindow : public QMainWindow
 {
@@ -18,7 +20,6 @@ public:
 
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    QList<MMOClient *> m_clientList;
 
 
 private:
@@ -27,9 +28,8 @@ private:
     void clearData();
 
 
-
+    Realm * m_realm;
     Ui::MainWindow * ui;
-    QTcpServer * m_server;
     quint16 m_port = 2100;
 };
 

@@ -27,11 +27,25 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-        NetworkObjects/mmoclient.cpp
+    System/realm.cpp \
+    System/room.cpp \
+    System/client.cpp \
+    System/packet.cpp \
+    Gameplay/mapdata.cpp \
+    Gameplay/board.cpp \
+    Gameplay/spawner.cpp \
+    Gameplay/spawn.cpp
 
 HEADERS += \
         mainwindow.h \
-        NetworkObjects/mmoclient.h
+    System/realm.h \
+    System/room.h \
+    System/client.h \
+    System/packet.h \
+    Gameplay/mapdata.h \
+    Gameplay/board.h \
+    Gameplay/spawner.h \
+    Gameplay/spawn.h
 
 FORMS += \
         mainwindow.ui
